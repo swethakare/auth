@@ -1,0 +1,12 @@
+<div class="login-page">
+    <h1 class="heading">Authentication Form</h1>
+    <div class="form">
+        <form class="login-form">
+            <input type="text" name="usename" [(ngModel)]="loginObj.username" placeholder="username" />
+            <input type="password" name="password" [(ngModel)]= "loginObj.password" placeholder="password" />
+            <button (click)="onLogin()">login</button>
+            <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+        </form>
+    
+    </div>
+</div>

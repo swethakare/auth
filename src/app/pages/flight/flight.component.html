@@ -1,0 +1,18 @@
+<div class="flight-page">
+    <h1 class="heading">Flight Information Form</h1>
+    <div class="form">
+        <form class="login-form">
+            <input type="text" name="airline" [(ngModel)]="flightObj.airline" placeholder="airline" />
+            <input type="text" name="arrivalDate" [(ngModel)]= "flightObj.arrivalDate" placeholder="arrivalDate" />
+            <input type="text" name="arrivalTime" [(ngModel)]="flightObj.arrivalTime" placeholder="arrivalTime" />
+            <input type="text" name="flightNumber" [(ngModel)]= "flightObj.flightNumber" placeholder="flightNumber" />
+            <input type="text" name="numOfGuests" [(ngModel)]="flightObj.numOfGuests" placeholder="numOfGuests" />
+            <input type="text" name="comments" [(ngModel)]= "flightObj.comments" placeholder="comments" />
+            <button (click)="onSubmit()">Submit</button>
+            <div *ngIf="errorMessage" class="error-message">
+                {{ errorMessage }}
+            </div>
+        </form>
+    </div>
+</div>
+
